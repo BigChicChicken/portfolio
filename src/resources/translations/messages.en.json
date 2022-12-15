@@ -1,0 +1,67 @@
+{
+  "About me": "About me",
+  "Agronomy/Agrifood public institute": "Agronomy/Agrifood public institute",
+  "Bank": "Bank",
+  "Communication": "Communication",
+  "Current salary": "Current salary",
+  "CV - French": "CV - French",
+  "CV - Canadian": "CV - Canadian",
+  "Databases": "Databases",
+  "Developer": "Developer",
+  "Development tools": "Development tools",
+  "Diplomas": "Diplomas",
+  "Equivalence": "Equivalence",
+  "Executive": "Executive",
+  "Framework - Back-End": "Framework - Back-End",
+  "Framework - Front-End": "Framework - Front-End",
+  "France": "France",
+  "Languages": "Langues",
+  "Recruiter corner": "Recruiter corner",
+  "Sheet metal industry/Ventilation": "Sheet metal industry/Ventilation",
+  "Skills": "Skills",
+  "Development internship": "Development internship",
+  "Today": "Today",
+  "Web developer": "Web developer",
+  "Work history": "Work history",
+  "Year": "Year",
+  "@about_me": "Web developer since 2016, I am constantly evolving my skills. Passionate, self-taught and versatile, I mastery the different technical steps to create a web application; from understanding of the needs to front-end and back-end development, including the maintenance.",
+  "@recruitment": "You are a recruiter and you want to contact me. Here is some information about my current situation and my CV.",
+  "@jobs": {
+    "@cnerta_web": {
+      "@tasks": [
+        "Develop websites/intranet.",
+        "Design databases.",
+        "Create and make available Rest APIs.",
+        "Maintain the sustainability of several departmental websites.",
+        "Analyze and create specifications.",
+        "Estimate design times for new projects.",
+        "Interact with the members of a project and propose changes.",
+        "Implement continuous deployment best practices.",
+        "Monitor the evolution of technologies."
+      ]
+    },
+    "@aeraulique_construction": {
+      "@tasks": [
+        "Develop websites/intranet.",
+        "Design databases.",
+        "Reverse engineering on sensitive applications.",
+        "Manager of information and discussion meetings on the design. (SCRUM)",
+        "Improve advanced trigonometric calculations.",
+        "Optimize the daily tasks of the company.",
+        "Supervise the implementation of software and new standards.",
+        "Set up distribution services (SMTP, Web Server).",
+        "Maintain the proper functioning of servers and general services.",
+        "Train and educate the various employees.",
+        "Study and manage changes in IT structure."
+      ]
+    },
+    "@infin_it": {
+      "@tasks": [
+        "Develop websites/intranet.",
+        "Design databases.",
+        "Produce and apply a responsive graphic charter.",
+        "Produce technical documentation (UML Diagram, Database schema, etc...)."
+      ]
+    }
+  }
+}

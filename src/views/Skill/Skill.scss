@@ -1,0 +1,38 @@
+@import 'resources/styles/constants';
+
+#Skill {
+  grid-area: Skill;
+
+  > .skills {
+    &:not(:first-child) {
+      margin-top: $space-lg;
+    }
+
+    > .title {
+      margin-bottom: $space-md;
+    }
+
+    > .group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: $space-md;
+
+      > .text-box {
+        height: calc(128px + 12pt);
+        width: 128px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        align-items: center;
+        justify-items: center;
+
+        img {
+          width: 85%;
+          height: 85%;
+          filter: drop-shadow(0 0 $blur-distance $white-light);
+        }
+      }
+    }
+  }
+}

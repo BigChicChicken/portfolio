@@ -1,0 +1,41 @@
+@import 'resources/styles/constants';
+
+#Career {
+  grid-area: Career;
+
+  .job {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+      "company date"
+      "domain-location name"
+      "task task"
+    ;
+
+    .company {
+      grid-area: company;
+      text-transform: uppercase;
+    }
+
+    .date {
+      grid-area: date;
+      text-align: right;
+    }
+
+    .domain-location {
+      grid-area: domain-location;
+      margin-bottom: $space-md;
+    }
+
+    .name {
+      grid-area: name;
+      text-align: right;
+    }
+
+    .task {
+      grid-area: task;
+      padding-left: $space-lg;
+    }
+  }
+}

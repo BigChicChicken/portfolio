@@ -1,0 +1,206 @@
+@import 'resources/styles/constants';
+
+$space-gradient: linear-gradient(to left top, #1d1135, #1c123a, #1b123e, #181343, #151448, #191753, #1d1a5f, #221d6b, #362180, #4b2394, #6322a8, #7d1eba);
+
+$space-xs: .1cm;
+$space-sm: .25cm;
+$space-md: .5cm;
+$space-lg: 1cm;
+
+$border-radius: .1cm;
+
+$blur-distance: .25cm;
+
+@page {
+  size: letter;
+  margin: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+html {
+  overflow: hidden;
+  font-family: Roboto, sans-serif;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+body {
+  width: $letter-width;
+  height: $letter-height;
+  margin: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  > tbody > tr > td {
+    border: 0 solid transparent;
+  }
+
+  > tbody > tr + tr > td {
+    border-top-width: $space-md;
+  }
+}
+
+ul {
+  list-style-type: circle;
+  padding-left: 2rem;
+}
+
+.page {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  background-color: $white;
+  page-break-after: always;
+
+  &:nth-child(1) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "Header"
+      "Body"
+      "Footer"
+  ;
+
+  }
+
+  &:nth-child(2) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+      "Body"
+      "Footer"
+    ;
+   }
+
+  > .header {
+    grid-area: Header;
+
+    background-image:
+            $geometry-texture,
+            $space-gradient
+    ;
+    border-radius: 0 0 100% 100% / 0 0 20% 20%;
+
+    > .content {
+      display: flex;
+      justify-content: space-between;
+      gap: $space-lg;
+      padding: $space-lg;
+      color: $white;
+      text-shadow: 0 0 $blur-distance $white;
+
+      > .text {
+        display: flex;
+        flex-direction: column;
+        gap: $space-md;
+        flex-grow: 1;
+
+        > *:nth-child(1) {
+          text-align: center;
+        }
+
+        > *:nth-child(2) {
+          display: flex;
+          justify-content: space-between;
+          padding-top: $space-md;
+          border-top: 3px solid $white;
+        }
+
+        .material-symbols-outlined.icon {
+          font-size: 14pt;
+          vertical-align: middle;
+          margin-right: $space-xs;
+        }
+      }
+    }
+  }
+
+  > .body {
+    grid-area: Body;
+
+    display: flex;
+    flex-direction: column;
+    gap: $space-lg;
+
+    padding: $space-lg;
+
+    .job {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      grid-template-rows: repeat(4, auto);
+      grid-template-areas:
+        "company date"
+        "name name"
+        "skills skills"
+        "tasks tasks"
+      ;
+      gap: $space-xs;
+
+      &:not(:last-child) {
+        margin-bottom: $space-sm;
+        padding-bottom: $space-sm;
+        border-bottom: 1px solid $black;
+      }
+
+      .company{
+        grid-area: company;
+      }
+
+      .date{
+        grid-area: date;
+      }
+
+      .name{
+        grid-area: name;
+      }
+
+      .skills{
+        grid-area: skills;
+        font-style: italic;
+        font-size: 10pt;
+      }
+
+      .tasks{
+        grid-area: tasks;
+      }
+    }
+  }
+
+  > .footer {
+    grid-area: Footer;
+
+    display: flex;
+    justify-content: space-between;
+    font-size: 10pt;
+    font-style: italic;
+    color: $grey;
+    padding: $space-lg;
+  }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: $space-md;
+    border-bottom: 3px solid $black;
+
+    > .material-symbols-outlined {
+      margin-right: $space-sm;
+    }
+  }
+
+  .qrcode {
+    width: 2cm;
+    border-radius: $border-radius;
+    background-color: $white;
+    box-shadow: 0 0 $blur-distance $white;
+  }
+}

@@ -1,0 +1,19 @@
+@import 'resources/styles/constants';
+
+#Recruitment {
+  grid-area: Recruitment;
+
+  .status,
+  .salary {
+    text-transform: uppercase;
+    font-size: 18pt;
+    text-align: center;
+    margin-top: $space-md;
+  }
+
+  .cv-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: $space-md;
+  }
+}

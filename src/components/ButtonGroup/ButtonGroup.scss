@@ -1,0 +1,14 @@
+.button-group {
+  display: flex;
+
+  > .button:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left-style: unset;
+  }
+
+  > .button:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}

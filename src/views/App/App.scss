@@ -1,0 +1,80 @@
+@import 'resources/styles/constants';
+@import 'resources/styles/neon-sign';
+@import 'resources/styles/text-box';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+html,
+body {
+  font-family: Roboto, sans-serif;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: $background-default;
+  color: $white;
+}
+
+a,
+button,
+input[type="checkbox"],
+input[type="radio"] {
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 40pt;
+}
+
+h2 {
+  font-size: 30pt;
+}
+
+h3 {
+  font-size: 25pt;
+}
+
+h4 {
+  font-size: 20pt;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: max(512px, 100%) repeat(5, auto);
+  grid-template-areas:
+        "Home"
+        "AboutMe"
+        "Career"
+        "Skill"
+        "Diploma"
+        "Recruitment"
+  ;
+}
+
+section:not(:first-child) {
+  width: 100%;
+  max-width: 1024px;
+  margin: $space-lg auto;
+  padding: $space-md;
+
+  > .section-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: $space-md;
+
+    > .material-symbols-outlined {
+      font-size: 25pt;
+      margin-right: $space-md;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@import 'resources/styles/constants';
+
+.CV {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+  background-color: $background-default;
+  padding: $space-xl $space-lg $space-lg $space-lg;
+  z-index: 1;
+
+  > .actions {
+    position: absolute;
+    top: $space-md;
+    right: $space-md;
+    display: flex;
+    gap: $space-sm;
+  }
+}

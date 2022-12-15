@@ -1,0 +1,19 @@
+@import 'resources/styles/constants';
+
+#AboutMe {
+  grid-area: AboutMe;
+
+  > .content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: $space-lg;
+
+    > .text-box {
+      flex-basis: 512px;
+      flex-grow: 1;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@import 'resources/styles/constants';
+
+.text-box {
+  padding: $space-md;
+  background-color: $background;
+  border-color: $border-color;
+  border-width: $border-md;
+  border-style: solid;
+  border-radius: $border-radius;
+}

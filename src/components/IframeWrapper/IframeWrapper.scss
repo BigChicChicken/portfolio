@@ -1,0 +1,13 @@
+@import 'resources/styles/constants';
+
+.iframe-wrapper {
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  box-sizing: content-box;
+  filter: drop-shadow(0 0 $blur-distance $white);
+
+  > iframe {
+    transform-origin: top left;
+  }
+}

@@ -1,0 +1,13 @@
+@property --number {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+.counter-animation {
+  counter-reset: num var(--number);
+
+  &::before {
+    content: counter(num);
+  }
+}

@@ -1,0 +1,13 @@
+@import 'resources/styles/constants';
+
+.neon-sign {
+  padding: $space-md $space-lg;
+  color: $white;
+  background-color: $white-light;
+  border-width: $border-lg;
+  border-style: solid;
+  border-color: $white;
+  box-shadow: 0 0 $blur-distance $white, 0 0 $blur-distance $white inset;
+  text-shadow: 0 0 $blur-distance $white;
+  text-align: center;
+}

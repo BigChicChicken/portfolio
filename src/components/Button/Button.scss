@@ -1,0 +1,14 @@
+@import 'resources/styles/constants';
+
+.button {
+  display: flex;
+  text-transform: uppercase;
+  font-size: 12pt;
+  padding: $space-xs $space-sm;
+  color: $white;
+  background-color: $background;
+  border-color: $border-color;
+  border-width: $border-md;
+  border-style: solid;
+  border-radius: $border-radius;
+}

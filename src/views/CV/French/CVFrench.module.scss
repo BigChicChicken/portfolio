@@ -1,0 +1,204 @@
+@import 'resources/styles/constants';
+
+$space-gradient: linear-gradient(to left top, #1d1135, #1c123a, #1b123e, #181343, #151448, #191753, #1d1a5f, #221d6b, #362180, #4b2394, #6322a8, #7d1eba);
+
+$space-xs: .1cm;
+$space-sm: .25cm;
+$space-md: .5cm;
+$space-lg: 1cm;
+
+$border-radius: .1cm;
+
+$blur-distance: .25cm;
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+html {
+  overflow: hidden;
+  font-family: Roboto, sans-serif;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+body {
+  width: $A4-width;
+  height: $A4-height;
+  margin: auto;
+}
+
+ul {
+  list-style-type: circle;
+  padding-left: 2rem;
+
+  > li {
+    margin-top: $space-sm;
+  }
+}
+
+.page {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "Header"
+    "Body"
+    "Footer"
+  ;
+
+  height: 100%;
+  width: 100%;
+  background-color: $white;
+  page-break-after: always;
+
+  > .header {
+    grid-area: Header;
+
+    background-image:
+        $geometry-texture,
+        $space-gradient
+    ;
+    border-radius: 0 0 100% 100% / 0 0 20% 20%;
+
+    > .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: $space-lg;
+      color: $white;
+      text-shadow: 0 0 $blur-distance $white;
+    }
+  }
+
+  > .body {
+    grid-area: Body;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+      "Summary Summary"
+      "Skills Career"
+      "Diplomas Career"
+    ;
+    gap: $space-sm;
+    padding: $space-lg;
+
+    > .summary {
+      grid-area: Summary;
+    }
+
+    > .skills {
+      grid-area: Skills;
+    }
+
+    > .diplomas {
+      grid-area: Diplomas;
+      padding-top: $space-sm;
+      border-top: 1px solid $black;
+    }
+
+    > .career {
+      grid-area: Career;
+
+      .job {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas:
+          "company date"
+          "name name"
+          "skills skills"
+        ;
+
+        .company {
+          grid-area: company;
+        }
+
+        .date {
+          grid-area: date;
+        }
+
+        .name {
+          grid-area: name;
+        }
+
+        .skills {
+          grid-area: skills;
+        }
+      }
+    }
+  }
+
+  > .footer {
+    grid-area: Footer;
+
+    background-image:
+      $geometry-texture,
+      $space-gradient
+    ;
+
+    color: $white;
+    border-radius: 100% 100% 0 0 / 20% 20% 0 0;
+
+    > .content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: $space-lg;
+
+      .material-symbols-outlined.icon {
+        font-size: 14pt;
+        vertical-align: middle;
+        margin-right: $space-xs;
+      }
+    }
+  }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+
+    > .material-symbols-outlined {
+      margin-right: $space-sm;
+    }
+  }
+
+  .img-wrapper {
+    display: block;
+    width: 3cm;
+    height: 3cm;
+    background-color: $white;
+    border: 1px solid $white;
+    border-radius: $space-sm;
+    box-shadow: 0 0 $blur-distance $white;
+    overflow: hidden;
+
+    > img {
+      width: 3cm;
+      height: 3cm;
+    }
+  }
+
+  .qrcode {
+    width: 2cm;
+    border-radius: $border-radius;
+    background-color: $white;
+    box-shadow: 0 0 $blur-distance $white;
+  }
+
+  .grey-box {
+    background-color: $grey-light;
+    border-radius: $border-radius;
+    padding: $space-sm $space-md;
+  }
+}

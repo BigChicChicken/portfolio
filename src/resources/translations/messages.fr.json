@@ -1,0 +1,68 @@
+{
+  "About me": "À propos de moi",
+  "Agronomy/Agrifood public institute": "Institue publique Agronomie/Agroalimentaire",
+  "Bank": "Banque",
+  "Communication": "Communication",
+  "Current status": "Statut actuel",
+  "Salary": "Salaire",
+  "CV - French": "CV - Français",
+  "CV - Canadian": "CV - Canadien",
+  "Databases": "Bases de données",
+  "Developer": "Développeur",
+  "Development tools": "Outils de développement",
+  "Diplomas": "Diplômes",
+  "Equivalence": "Équivalence",
+  "Executive": "Cadre",
+  "Framework - Back-End": "Framework - Back-End",
+  "Framework - Front-End": "Framework - Front-End",
+  "France": "France",
+  "Languages": "Languages",
+  "Recruiter corner": "Coin recruteur",
+  "Sheet metal industry/Ventilation": "Industrie Tôlerie/Ventilation",
+  "Skills": "Compétences",
+  "Development internship": "Stage de développement",
+  "Today": "Aujourd'hui",
+  "Web developer": "Développeur web",
+  "Work history": "Parcours profesionnel",
+  "Year": "An",
+  "@about_me": "Développeur web depuis 2016, je fais évoluer constamment mes compétences. Passionné, autodidacte et polyvalent, je maîtrise les différentes étapes techniques de création d'une application web; de la compréhension des besoins au développement front-end et back-end, en passant par la maintenance.",
+  "@recruitment": "Vous êtes un recruteur et vous souhaitez me contacter. Voici quelques informations sur ma situation actuelle ainsi que mes CV.",
+  "@jobs": {
+    "@cnerta_web": {
+      "@tasks": [
+        "Développer des sites web/intranet.",
+        "Concevoir des bases de données.",
+        "Créer et mettre à disposition des API Rest.",
+        "Maintenir la pérennité de plusieurs sites web ministériels.",
+        "Analyser et créer des cahiers des charges.",
+        "Estimer les temps de conception de nouveaux projets.",
+        "Interagir avec les membres d’un projet et proposer des évolutions.",
+        "Mettre en place des meilleures pratiques de déploiement continu.",
+        "Veiller sur l’évolution des technologies."
+      ]
+    },
+    "@aeraulique_construction": {
+      "@tasks": [
+        "Développer des sites web/intranet.",
+        "Concevoir des bases de données.",
+        "Faire du reverse engineering sur des applications sensibles.",
+        "Manager des réunions d’informations et d’échange sur la conception. (SCRUM)",
+        "Améliorer des calculs trigonométriques avancés.",
+        "Optimiser les tâches quotidiennes de l’entreprise.",
+        "Superviser la mise en place des logiciels et des nouveaux standards.",
+        "Mettre en place des services de distribution (SMTP, Serveur Web).",
+        "Maintenir le bon fonctionnement des serveurs et des services généraux.",
+        "Former et sensibiliser les différents collaborateurs.",
+        "Étudier et gérer les évolutions de structure informatique."
+      ]
+    },
+    "@infin_it": {
+      "@tasks": [
+        "Développer des sites intranet.",
+        "Concevoir des bases de données.",
+        "Produire et appliquer une charte graphique responsive.",
+        "Produire de la documentation technique (Diagramme UML, Schéma de base de données, etc...)."
+      ]
+    }
+  }
+}

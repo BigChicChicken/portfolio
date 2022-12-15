@@ -1,0 +1,18 @@
+@import 'resources/styles/constants';
+
+#Diploma {
+  grid-area: Diploma;
+
+  > .group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: $space-md;
+
+    > .text-box {
+      >.title {
+        margin-bottom: $space-sm;
+      }
+    }
+  }
+}
