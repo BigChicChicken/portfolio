@@ -1,7 +1,7 @@
-import React, { Component, ReactElement } from 'react';
+import React, { Component, JSX } from 'react';
 
-export interface TransitionProps {
-    children: ReactElement;
+export interface TransitionPropsI {
+    children: JSX.Element;
     in: boolean;
     mode: 'translate' | 'grow' | 'fade' | 'scale';
     direction?: 'top' | 'right' | 'bottom' | 'left';
@@ -12,13 +12,13 @@ export interface TransitionProps {
     };
 }
 
-class Transition extends Component<TransitionProps, {}> {
+class Transition extends Component<TransitionPropsI, {}> {
     static DEFAULT_DURATION = 500;
     static DEFAULT_DELAY = 0;
 
     private Children: HTMLElement | null;
 
-    constructor(props: Readonly<TransitionProps>) {
+    constructor(props: Readonly<TransitionPropsI>) {
         super(props);
 
         this.Children = null;
@@ -30,7 +30,7 @@ class Transition extends Component<TransitionProps, {}> {
         this.update(visible);
     };
 
-    shouldComponentUpdate = ({ in: nextVisible }: TransitionProps) => {
+    shouldComponentUpdate = ({ in: nextVisible }: TransitionPropsI) => {
         const { in: visible } = this.props;
 
         if (visible !== nextVisible) {

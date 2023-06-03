@@ -12,10 +12,12 @@
   "Development tools": "Outils de développement",
   "Diplomas": "Diplômes",
   "Equivalence": "Équivalence",
+  "Equivalences": "Équivalences",
   "Executive": "Cadre",
   "Framework - Back-End": "Framework - Back-End",
   "Framework - Front-End": "Framework - Front-End",
   "France": "France",
+  "IT engineer": "Ingénieur informatique",
   "Languages": "Languages",
   "Recruiter corner": "Coin recruteur",
   "Sheet metal industry/Ventilation": "Industrie Tôlerie/Ventilation",
@@ -28,6 +30,18 @@
   "@about_me": "Développeur web depuis 2016, je fais évoluer constamment mes compétences. Passionné, autodidacte et polyvalent, je maîtrise les différentes étapes techniques de création d'une application web; de la compréhension des besoins au développement front-end et back-end, en passant par la maintenance.",
   "@recruitment": "Vous êtes un recruteur et vous souhaitez me contacter. Voici quelques informations sur ma situation actuelle ainsi que mes CV.",
   "@jobs": {
+    "@sogexia": {
+      "@tasks": [
+        "Développer et améliorer des fonctionnalités.",
+        "Analyser et corriger le code des autres développeurs.",
+        "Travailler avec une équipe à l'aide de la méthode SCRUM.",
+        "Estimer la complexité et le temps de conception des nouveaux projets.",
+        "Échanger quotidiennement sur l'avancement des différentes tâches.",
+        "Designer les futurs développements basé sur la clean architecture hexagonale.",
+        "Assurer à la correction de bugs remontés par les différents services.",
+        "Mettre en place des tests fonctionnels et unitaires."
+      ]
+    },
     "@cnerta_web": {
       "@tasks": [
         "Développer des sites web/intranet.",

@@ -5,15 +5,18 @@ import Translator from 'components/Translator/Translator';
 import ScrollAnimation from 'components/ScrollAnimation/ScrollAnimation';
 import Button from 'components/Button/Button';
 import ButtonGroup from 'components/ButtonGroup/ButtonGroup';
-import i18n from 'i18next';
 import Transition from 'components/Transition/Transition';
+import { withTranslation, WithTranslationProps } from 'react-i18next';
+import compose from 'hocs/compose';
 
-export interface HomeState {
+export interface HomePropsI extends WithTranslationProps {}
+
+export interface HomeStateI {
     visible: boolean;
 }
 
-class Home extends Component<{}, HomeState> {
-    constructor(props: {}) {
+class Home extends Component<HomePropsI, HomeStateI> {
+    constructor(props: HomePropsI) {
         super(props);
 
         this.state = {
@@ -31,7 +34,10 @@ class Home extends Component<{}, HomeState> {
     };
 
     onLanguageChange = (language: string) => () => {
-        i18n.changeLanguage(language).catch(console.error);
+        const { i18n } = this.props;
+        if (i18n) {
+            i18n.changeLanguage(language).catch(console.error);
+        }
     };
 
     render = () => {
@@ -69,4 +75,4 @@ class Home extends Component<{}, HomeState> {
     };
 }
 
-export default Home;
+export default compose(withTranslation())(Home);

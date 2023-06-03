@@ -30,6 +30,13 @@ html {
   -webkit-print-color-adjust: exact;
 }
 
+@media print {
+  body {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
 body {
   width: $letter-width;
   height: $letter-height;

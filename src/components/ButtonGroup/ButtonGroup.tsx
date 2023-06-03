@@ -1,11 +1,11 @@
 import './ButtonGroup.scss';
 import React, { Component, ReactNode } from 'react';
 
-export interface ButtonGroupProps {
+export interface ButtonGroupPropsI {
     children: ReactNode;
 }
 
-class ButtonGroup extends Component<ButtonGroupProps, {}> {
+class ButtonGroup extends Component<ButtonGroupPropsI, {}> {
     render = () => {
         const { children } = this.props;
 

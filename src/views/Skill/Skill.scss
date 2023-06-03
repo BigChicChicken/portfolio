@@ -3,7 +3,7 @@
 #Skill {
   grid-area: Skill;
 
-  > .skills {
+  .skills {
     &:not(:first-child) {
       margin-top: $space-lg;
     }

@@ -1,20 +1,20 @@
 import './Carousel.scss';
-import React, { Component, ReactElement } from 'react';
+import React, { Component, JSX } from 'react';
 
-interface CarouselProps {
+interface CarouselPropsI {
     elements: {
-        header: ReactElement;
-        content: ReactElement;
+        header: JSX.Element;
+        content: JSX.Element;
     }[];
 }
 
-class Carousel extends Component<CarouselProps, {}> {
-    private readonly Headers: HTMLElement[];
-    private readonly Contents: HTMLElement[];
-    private currentHeader: null | HTMLElement;
-    private currentContent: null | HTMLElement;
+class Carousel extends Component<CarouselPropsI, {}> {
+    private readonly Headers: HTMLDivElement[];
+    private readonly Contents: HTMLDivElement[];
+    private currentHeader: null | HTMLDivElement;
+    private currentContent: null | HTMLDivElement;
 
-    constructor(props: CarouselProps) {
+    constructor(props: CarouselPropsI) {
         super(props);
 
         if (props.elements.length < 3) {
@@ -60,7 +60,7 @@ class Carousel extends Component<CarouselProps, {}> {
                     {elements.map(({ header }, index) => (
                         <>
                             <div
-                                ref={(element: any) =>
+                                ref={(element: HTMLDivElement) =>
                                     (this.Headers[index] = element)
                                 }
                                 className="header"
@@ -76,7 +76,7 @@ class Carousel extends Component<CarouselProps, {}> {
                     {elements.map(({ content }, index) => (
                         <>
                             <div
-                                ref={(element: any) =>
+                                ref={(element: HTMLDivElement) =>
                                     (this.Contents[index] = element)
                                 }
                                 className="content"

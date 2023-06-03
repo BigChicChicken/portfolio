@@ -2,19 +2,13 @@ import './IframeWrapper.scss';
 import React, { Component, ReactNode } from 'react';
 import ReactDOM from 'react-dom';
 
-export interface IframeWrapperProps {
+export interface IframeWrapperPropsI {
     children: ReactNode;
     heads: ReactNode[];
 }
 
-class IframeWrapper extends Component<IframeWrapperProps, {}> {
-    private iframe: HTMLIFrameElement | null;
-
-    constructor(props: IframeWrapperProps) {
-        super(props);
-
-        this.iframe = null;
-    }
+class IframeWrapper extends Component<IframeWrapperPropsI, {}> {
+    private iframe: HTMLIFrameElement | null = null;
 
     componentDidMount = () => {
         this.forceUpdate();
@@ -80,7 +74,11 @@ class IframeWrapper extends Component<IframeWrapperProps, {}> {
     render() {
         return (
             <div className="iframe-wrapper">
-                <iframe ref={(element) => (this.iframe = element)}>
+                <iframe
+                    ref={(element: HTMLIFrameElement) =>
+                        (this.iframe = element)
+                    }
+                >
                     {this.renderIframe()}
                 </iframe>
             </div>

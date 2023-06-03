@@ -2,6 +2,8 @@
 
 .button {
   display: flex;
+  align-items: center;
+  gap: $space-sm;
   text-transform: uppercase;
   font-size: 12pt;
   padding: $space-xs $space-sm;

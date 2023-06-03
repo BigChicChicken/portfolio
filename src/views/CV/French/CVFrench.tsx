@@ -5,13 +5,7 @@ import CV from 'views/CV/CV';
 import Translator from 'components/Translator/Translator';
 
 class CVFrench extends Component<{}, {}> {
-    private CV: CV | null;
-
-    constructor(props: {}) {
-        super(props);
-
-        this.CV = null;
-    }
+    private CV: typeof CV | null = null;
 
     show = () => {
         if (this.CV) {
@@ -22,9 +16,8 @@ class CVFrench extends Component<{}, {}> {
     render = () => {
         return (
             <CV
-                ref={(element) => {
-                    this.CV = element;
-                }}
+                id="french"
+                ref={(ref: typeof CV) => (this.CV = ref)}
                 style={<style type="text/css">{style}</style>}
             >
                 <div className="page">

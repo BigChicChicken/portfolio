@@ -5,13 +5,7 @@ import CV from 'views/CV/CV';
 import Translator from 'components/Translator/Translator';
 
 class CVCanadian extends Component<{}, {}> {
-    private CV: CV | null;
-
-    constructor(props: {}) {
-        super(props);
-
-        this.CV = null;
-    }
+    private CV: typeof CV | null = null;
 
     show = () => {
         if (this.CV) {
@@ -22,9 +16,8 @@ class CVCanadian extends Component<{}, {}> {
     render = () => {
         return (
             <CV
-                ref={(element) => {
-                    this.CV = element;
-                }}
+                id="canadian"
+                ref={(ref: typeof CV) => (this.CV = ref)}
                 style={<style type="text/css">{style}</style>}
             >
                 <div className="page">
@@ -162,7 +155,9 @@ class CVCanadian extends Component<{}, {}> {
                                 <h3>
                                     <Translator value={data.diplomas.title} />
                                     {' / '}
-                                    <Translator value="Equivalence" />
+                                    <Translator
+                                        value={data.equivalences.title}
+                                    />
                                 </h3>
                             </div>
 
@@ -177,7 +172,11 @@ class CVCanadian extends Component<{}, {}> {
                                                         <br />
                                                         {speciality}
                                                     </td>
-                                                    <td>{equivalent}</td>
+                                                    <td>
+                                                        {equivalent.name}
+                                                        <br />
+                                                        {equivalent.speciality}
+                                                    </td>
                                                 </tr>
                                             </>
                                         )
@@ -243,15 +242,17 @@ class CVCanadian extends Component<{}, {}> {
                                                 {skills.join(', ')}.
                                             </p>
                                             <ul className="tasks">
-                                                {tasks.map((task) => (
-                                                    <>
-                                                        <li>
-                                                            <Translator
-                                                                value={task}
-                                                            />
-                                                        </li>
-                                                    </>
-                                                ))}
+                                                {tasks
+                                                    .slice(0, 7)
+                                                    .map((task) => (
+                                                        <>
+                                                            <li>
+                                                                <Translator
+                                                                    value={task}
+                                                                />
+                                                            </li>
+                                                        </>
+                                                    ))}
                                             </ul>
                                         </div>
                                     </>

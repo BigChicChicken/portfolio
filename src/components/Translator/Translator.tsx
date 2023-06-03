@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
 import { withTranslation, WithTranslationProps } from 'react-i18next';
 
-export interface TranslatorProps {
+export interface TranslatorPropsI extends WithTranslationProps {
     value: string;
 }
 
-class Translator extends Component<
-    TranslatorProps & WithTranslationProps,
-    any
-> {
+class Translator extends Component<TranslatorPropsI, any> {
     render = () => {
         const { i18n, value } = this.props;
 

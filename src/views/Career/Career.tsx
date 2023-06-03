@@ -1,42 +1,17 @@
 import './Career.scss';
-import React from 'react';
+import React, { Component } from 'react';
 import data from 'src/data';
-import Transition from 'components/Transition/Transition';
 import Translator from 'components/Translator/Translator';
 import Carousel from 'components/Carousel/Carousel';
-import AbstractSection from 'components/AbstractSection/AbstractSection';
+import Section from 'components/Section/Section';
 
-class Career extends AbstractSection<{}, {}> {
+class Career extends Component<{}, {}> {
     render = () => {
-        const { visible } = this.state;
-
         return (
-            <section ref={(element) => (this.Section = element)} id="Career">
-                <div className="section-title">
-                    <Transition mode="fade" in={visible}>
-                        <div className="material-symbols-outlined icon">
-                            {data.career.icon}
-                        </div>
-                    </Transition>
-
-                    <Transition
-                        mode="translate"
-                        direction="right"
-                        delay={{ show: 750 }}
-                        in={visible}
-                    >
-                        <h3>
-                            <Translator value={data.career.title} />
-                        </h3>
-                    </Transition>
-                </div>
-
-                <Transition
-                    mode="translate"
-                    direction="bottom"
-                    delay={{ show: 750 }}
-                    in={visible}
-                >
+            <Section
+                id="Career"
+                title={{ icon: data.career.icon, text: data.career.title }}
+                content={
                     <div>
                         <Carousel
                             elements={data.career.data.map(
@@ -105,8 +80,8 @@ class Career extends AbstractSection<{}, {}> {
                             )}
                         />
                     </div>
-                </Transition>
-            </section>
+                }
+            />
         );
     };
 }

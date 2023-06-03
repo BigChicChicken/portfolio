@@ -22,7 +22,9 @@
     "paths": {
       "src/*": ["*"],
       "components/*": ["components/*"],
+      "hocs/*": ["hocs/*"],
       "resources/*": ["resources/*"],
+      "services/*": ["services/*"],
       "types/*": ["types/*"],
       "views/*": ["views/*"]
     }

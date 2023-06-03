@@ -17,6 +17,7 @@ import ANSIBLE_SVG from 'resources/svg/skills/Ansible.svg';
 import MERCURE_SVG from 'resources/svg/skills/Mercure.svg';
 import RABBITMQ_SVG from 'resources/svg/skills/RabbitMQ.svg';
 import REACT_SVG from 'resources/svg/skills/React.svg';
+import ANGULAR_SVG from 'resources/svg/skills/Angular.svg';
 import MUI_SVG from 'resources/svg/skills/MUI.svg';
 import BOOTSTRAP_SVG from 'resources/svg/skills/Bootstrap.svg';
 import SEMANTIC_SVG from 'resources/svg/skills/Semantic.svg';
@@ -51,8 +52,8 @@ export default {
     },
     location: {
         icon: 'map',
-        text: 'Dijon',
-        url: 'https://www.google.com/maps/place/21000+Dijon',
+        text: 'Québec',
+        url: 'https://www.google.com/maps/place/Québec,+QC,+Canada',
     },
     linkedin: {
         image: LINKEDIN_SVG,
@@ -72,18 +73,21 @@ export default {
         icon: 'work_history',
         title: 'Work history',
         data: [
-            // {
-            //     company: 'Sogexia',
-            //     name: 'Web developer',
-            //     logo: SOGEXIA_SVG,
-            //     location: 'France',
-            //     domain: 'Bank',
-            //     date: {
-            //         begin: '2022-01',
-            //     },
-            //     tasks: [],
-            //     skills: [],
-            // },
+            {
+                company: 'Sogexia',
+                name: 'IT engineer',
+                logo: SOGEXIA_SVG,
+                location: 'France',
+                domain: 'Bank',
+                date: {
+                    begin: '2023-01',
+                    end: '2023-06',
+                },
+                tasks: [...Array(8).keys()].map(
+                    (key) => `@jobs.@sogexia.@tasks.${key}`
+                ),
+                skills: ['HTML', 'PHP', 'CSS', 'TypeScript', 'Angular'],
+            },
             {
                 company: 'Cnerta web',
                 name: 'Web developer',
@@ -207,6 +211,7 @@ export default {
                 category: 'Framework - Front-End',
                 items: [
                     { name: 'React', svg: REACT_SVG },
+                    { name: 'Angular', svg: ANGULAR_SVG },
                     { name: 'MUI', svg: MUI_SVG },
                     {
                         name: 'Bootstrap',
@@ -248,22 +253,35 @@ export default {
                 name: 'Licence Professionnelle',
                 speciality:
                     "SIL, spécialité Système Intra/Internet pour l'Entreprise",
-                equivalent: "Sciences de l'informatique (BAC)",
+                equivalent: {
+                    name: 'Baccalauréat',
+                    speciality: "Sciences de l'informatique",
+                },
             },
             {
                 date: '2016-12',
                 name: 'BTS',
                 speciality:
                     'SIO, Solutions Logicielles et Applications Métiers',
-                equivalent: "Techniques de l'informatique (DEC)",
+                equivalent: {
+                    name: 'DEC',
+                    speciality: "Techniques de l'informatique",
+                },
             },
             {
                 date: '2014-12',
                 name: 'Baccalauréat Technologique',
                 speciality: "STI2D, Système d'Information et Numérique",
-                equivalent: 'Formation générale (DEC)',
+                equivalent: {
+                    name: 'DEC',
+                    speciality: 'Sciences informatiques et mathématiques',
+                },
             },
         ],
+    },
+    equivalences: {
+        icon: 'sync_alt',
+        title: 'Equivalences',
     },
     recruitment: {
         icon: 'verified',

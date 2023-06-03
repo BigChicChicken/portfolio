@@ -19,7 +19,9 @@ module.exports = {
         alias: {
             src: path.resolve(__dirname, 'src'),
             components: path.resolve(__dirname, 'src', 'components'),
+            hocs: path.resolve(__dirname, 'src', 'hocs'),
             resources: path.resolve(__dirname, 'src', 'resources'),
+            services: path.resolve(__dirname, 'src', 'services'),
             types: path.resolve(__dirname, 'src', 'types'),
             views: path.resolve(__dirname, 'src', 'views'),
         },
@@ -64,5 +66,8 @@ module.exports = {
     mode: 'production',
     performance: {
         hints: false,
+    },
+    devServer: {
+        historyApiFallback: true,
     },
 };

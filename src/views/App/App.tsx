@@ -1,36 +1,56 @@
 import './App.scss';
 import React, { Component } from 'react';
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
-import messagesEn from 'resources/translations/messages.en.json';
-import messagesFr from 'resources/translations/messages.fr.json';
+import i18n from 'services/i18n/i18n';
+import compose from 'hocs/compose';
+import withParams, { WithParamsProps } from 'hocs/withParams/withParams';
 import Home from 'views/Home/Home';
 import AboutMe from 'views/AboutMe/AboutMe';
 import Skill from 'views/Skill/Skill';
 import Career from 'views/Career/Career';
 import Recruitment from 'views/Recruitment/Recruitment';
 import Diploma from 'views/Diploma/Diploma';
+import Equivalence from 'views/Equivalence/Equivalence';
+import withLocation, {
+    WithLocationProps,
+} from 'hocs/withLocation/withLocation';
+import withNavigate, {
+    WithNavigateProps,
+} from 'hocs/withNavigate/withNavigate';
 
-i18n.use(initReactI18next)
-    .init({
-        debug: true,
-        resources: {
-            en: {
-                translation: messagesEn,
-            },
-            fr: {
-                translation: messagesFr,
-            },
-        },
-        lng: 'fr',
-        fallbackLng: 'en',
-        interpolation: {
-            escapeValue: false,
-        },
-    })
-    .catch(console.error);
+export interface AppPropsI
+    extends WithLocationProps,
+        WithNavigateProps,
+        WithParamsProps {}
 
-class App extends Component<{}, {}> {
+class App extends Component<AppPropsI, {}> {
+    componentDidMount() {
+        const { location, navigate, params } = this.props;
+
+        window.onpopstate = this.refreshPage();
+
+        i18n.on('languageChanged', (language) => {
+            const basePath = Object.entries(params).reduce(
+                (accumulator, [key, value]) =>
+                    value
+                        ? accumulator.replace(`/${value}`, `/:${key}`)
+                        : accumulator,
+                location.pathname
+            );
+
+            const newPath = Object.entries({ ...params, language }).reduce(
+                (accumulator, [key, value]) =>
+                    accumulator.replace(`/:${key}`, `/${value}`),
+                basePath
+            );
+
+            navigate({ ...location, pathname: newPath });
+        });
+    }
+
+    refreshPage = () => () => {
+        location.reload();
+    };
+
     render = () => {
         return (
             <>
@@ -39,10 +59,11 @@ class App extends Component<{}, {}> {
                 <Career />
                 <Skill />
                 <Diploma />
+                <Equivalence />
                 <Recruitment />
             </>
         );
     };
 }
 
-export default App;
+export default compose(withLocation(), withNavigate(), withParams())(App);

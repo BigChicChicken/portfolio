@@ -3,7 +3,9 @@
   "Agronomy/Agrifood public institute": "Agronomy/Agrifood public institute",
   "Bank": "Bank",
   "Communication": "Communication",
+  "Current status": "Current status",
   "Current salary": "Current salary",
+  "Salary": "Salaire",
   "CV - French": "CV - French",
   "CV - Canadian": "CV - Canadian",
   "Databases": "Databases",
@@ -11,10 +13,12 @@
   "Development tools": "Development tools",
   "Diplomas": "Diplomas",
   "Equivalence": "Equivalence",
+  "Equivalences": "Equivalences",
   "Executive": "Executive",
   "Framework - Back-End": "Framework - Back-End",
   "Framework - Front-End": "Framework - Front-End",
   "France": "France",
+  "IT engineer": "IT engineer",
   "Languages": "Langues",
   "Recruiter corner": "Recruiter corner",
   "Sheet metal industry/Ventilation": "Sheet metal industry/Ventilation",
@@ -27,6 +31,18 @@
   "@about_me": "Web developer since 2016, I am constantly evolving my skills. Passionate, self-taught and versatile, I mastery the different technical steps to create a web application; from understanding of the needs to front-end and back-end development, including the maintenance.",
   "@recruitment": "You are a recruiter and you want to contact me. Here is some information about my current situation and my CV.",
   "@jobs": {
+    "@sogexia": {
+      "@tasks": [
+        "Develop and improve functionalities.",
+        "Analyze and correct code from other developers.",
+        "Work with a team using the SCRUM methodology.",
+        "Estimate the complexity and design time of new projects.",
+        "Daily exchanging updates on the progress of different tasks.",
+        "Design future developments based on the clean hexagonal architecture.",
+        "Ensure the resolution of bugs reported by various services.",
+        "Implement functional and unit tests."
+      ]
+    },
     "@cnerta_web": {
       "@tasks": [
         "Develop websites/intranet.",
