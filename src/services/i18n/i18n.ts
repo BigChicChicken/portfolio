@@ -4,6 +4,9 @@ import languageDetector from 'i18next-browser-languagedetector';
 import messagesEn from 'resources/translations/messages.en.json';
 import messagesFr from 'resources/translations/messages.fr.json';
 
+export const LOOKUP_QUERY_STRING = 'lang';
+export const SUPPORTED_LNGS = ['en', 'fr'];
+
 i18n.use(languageDetector)
     .use(initReactI18next)
     .init({
@@ -16,12 +19,13 @@ i18n.use(languageDetector)
             },
         },
         fallbackLng: 'en',
-        supportedLngs: ['en', 'fr'],
+        supportedLngs: SUPPORTED_LNGS,
         interpolation: {
             escapeValue: false,
         },
         detection: {
-            order: ['path'],
+            order: ['querystring'],
+            lookupQuerystring: LOOKUP_QUERY_STRING,
         },
     })
     .catch(console.error);

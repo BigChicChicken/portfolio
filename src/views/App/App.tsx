@@ -1,8 +1,10 @@
 import './App.scss';
 import React, { Component } from 'react';
-import i18n from 'services/i18n/i18n';
+import i18n, { LOOKUP_QUERY_STRING, SUPPORTED_LNGS } from 'services/i18n/i18n';
 import compose from 'hocs/compose';
-import withParams, { WithParamsProps } from 'hocs/withParams/withParams';
+import withSearchParams, {
+    WithSearchParamsProps,
+} from 'hocs/withSearchParams/withSearchParams';
 import Home from 'views/Home/Home';
 import AboutMe from 'views/AboutMe/AboutMe';
 import Skill from 'views/Skill/Skill';
@@ -10,40 +12,38 @@ import Career from 'views/Career/Career';
 import Recruitment from 'views/Recruitment/Recruitment';
 import Diploma from 'views/Diploma/Diploma';
 import Equivalence from 'views/Equivalence/Equivalence';
-import withLocation, {
-    WithLocationProps,
-} from 'hocs/withLocation/withLocation';
-import withNavigate, {
-    WithNavigateProps,
-} from 'hocs/withNavigate/withNavigate';
 
-export interface AppPropsI
-    extends WithLocationProps,
-        WithNavigateProps,
-        WithParamsProps {}
+export interface AppPropsI extends WithSearchParamsProps {}
 
 class App extends Component<AppPropsI, {}> {
+    private readonly navigatorLanguage: string;
+
+    constructor(props: AppPropsI) {
+        super(props);
+
+        this.navigatorLanguage = navigator.language.substring(0, 2);
+    }
+
     componentDidMount() {
-        const { location, navigate, params } = this.props;
+        const {
+            searchParams: [urlSearchParams, setURLSearchParams],
+        } = this.props;
 
         window.onpopstate = this.refreshPage();
 
+        if (!urlSearchParams.get(LOOKUP_QUERY_STRING)) {
+            i18n.changeLanguage(
+                SUPPORTED_LNGS.indexOf(this.navigatorLanguage)
+                    ? this.navigatorLanguage
+                    : 'en'
+            ).catch(console.error);
+        }
+
         i18n.on('languageChanged', (language) => {
-            const basePath = Object.entries(params).reduce(
-                (accumulator, [key, value]) =>
-                    value
-                        ? accumulator.replace(`/${value}`, `/:${key}`)
-                        : accumulator,
-                location.pathname
-            );
-
-            const newPath = Object.entries({ ...params, language }).reduce(
-                (accumulator, [key, value]) =>
-                    accumulator.replace(`/:${key}`, `/${value}`),
-                basePath
-            );
-
-            navigate({ ...location, pathname: newPath });
+            setURLSearchParams((prev) => {
+                prev.set(LOOKUP_QUERY_STRING, language);
+                return prev;
+            });
         });
     }
 
@@ -66,4 +66,4 @@ class App extends Component<AppPropsI, {}> {
     };
 }
 
-export default compose(withLocation(), withNavigate(), withParams())(App);
+export default compose(withSearchParams())(App);

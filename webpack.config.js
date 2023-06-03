@@ -1,6 +1,8 @@
+const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const FallbackProcess = require.resolve('process/browser');
 
 module.exports = {
     entry: path.join(__dirname, 'src', 'index.tsx'),
@@ -9,6 +11,7 @@ module.exports = {
         filename: 'index.js',
     },
     plugins: [
+        new webpack.EnvironmentPlugin({ ROUTER_BASENAME: '/' }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'public', 'index.html'),
             favicon: path.resolve(__dirname, 'public', 'favicon.svg'),
@@ -26,6 +29,7 @@ module.exports = {
             views: path.resolve(__dirname, 'src', 'views'),
         },
         extensions: ['.tsx', '.ts', '.js'],
+        fallback: { process: FallbackProcess },
     },
     module: {
         rules: [
