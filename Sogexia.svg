@@ -1,0 +1,12 @@
+<svg viewBox="0 0 115.29 115.29" xmlns="http://www.w3.org/2000/svg">
+    <radialGradient id="a" cx="-.353" cy="1.147" r="118.14" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#80CFF5" offset="0"/>
+        <stop stop-color="#035CA0" offset="1"/>
+    </radialGradient>
+    <rect width="115.29" height="115.29" fill="url(#a)"/>
+    <g fill="#fff">
+        <polygon class="st1" points="73.29 47.39 73.29 70.21 35.97 107.27 13.1 107.27"/>
+        <polygon class="st1" points="107.27 47.39 47.23 107.27 69.87 107.27 107.27 70.21"/>
+        <polygon class="st1" points="81.23 107.27 107.27 81.28 107.27 107.27"/>
+    </g>
+</svg>

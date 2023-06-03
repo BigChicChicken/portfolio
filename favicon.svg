@@ -1,3 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 4">
-  <path d="M 0 2 L 0 4 L 2 4 L 2 3 L 1 3 L 1 2 L 0 2 M 1 0 L 1 1 L 2 1 L 2 2 L 3 2 L 3 3 L 4 3 L 4 0 L 1 0" fill="#0c1117"/>
+  <defs>
+    <linearGradient id="gradient" gradientTransform="rotate(135)">
+      <stop stop-color="#7d1eba" offset="10%" />
+      <stop stop-color="#6720a1" offset="18%" />
+      <stop stop-color="#531f87" offset="26%" />
+      <stop stop-color="#401c6e" offset="34%" />
+      <stop stop-color="#301855" offset="42%" />
+      <stop stop-color="#241849" offset="50%" />
+      <stop stop-color="#1a163d" offset="58%" />
+      <stop stop-color="#131330" offset="66%" />
+      <stop stop-color="#0e132b" offset="74%" />
+      <stop stop-color="#0c1324" offset="82%" />
+      <stop stop-color="#0b121e" offset="90%" />
+      <stop stop-color="#0c1117" offset="100%" />
+    </linearGradient>
+  </defs>
+  <path d="M 0 2 L 0 4 L 2 4 L 2 3 L 1 3 L 1 2 L 0 2 M 1 0 L 1 1 L 2 1 L 2 2 L 3 2 L 3 3 L 4 3 L 4 0 L 1 0" fill="#0c1117" stroke="url(#gradient)" stroke-width=".25px"/>
 </svg>
+
