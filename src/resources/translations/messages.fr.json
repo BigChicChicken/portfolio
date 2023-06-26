@@ -1,6 +1,6 @@
 {
   "About me": "À propos de moi",
-  "Agronomy/Agrifood public institute": "Institue publique Agronomie/Agroalimentaire",
+  "Public institute of Agronomy/Agri-food": "Institut public d'Agronomie/Agroalimentaire",
   "Bank": "Banque",
   "Communication": "Communication",
   "Current status": "Statut actuel",
@@ -11,7 +11,6 @@
   "Developer": "Développeur",
   "Development tools": "Outils de développement",
   "Diplomas": "Diplômes",
-  "Equivalence": "Équivalence",
   "Equivalences": "Équivalences",
   "Executive": "Cadre",
   "Framework - Back-End": "Framework - Back-End",
@@ -25,7 +24,7 @@
   "Development internship": "Stage de développement",
   "Today": "Aujourd'hui",
   "Web developer": "Développeur web",
-  "Work history": "Parcours profesionnel",
+  "Professional journey": "Parcours profesionnel",
   "Year": "An",
   "@about_me": "Développeur web depuis 2016, je fais évoluer constamment mes compétences. Passionné, autodidacte et polyvalent, je maîtrise les différentes étapes techniques de création d'une application web; de la compréhension des besoins au développement front-end et back-end, en passant par la maintenance.",
   "@recruitment": "Vous êtes un recruteur et vous souhaitez me contacter. Voici quelques informations sur ma situation actuelle ainsi que mes CV.",
@@ -46,13 +45,13 @@
       "@tasks": [
         "Développer des sites web/intranet.",
         "Concevoir des bases de données.",
-        "Créer et mettre à disposition des API Rest.",
+        "Créer et mettre à disposition des API REST.",
         "Maintenir la pérennité de plusieurs sites web ministériels.",
         "Analyser et créer des cahiers des charges.",
         "Estimer les temps de conception de nouveaux projets.",
         "Interagir avec les membres d’un projet et proposer des évolutions.",
         "Mettre en place des meilleures pratiques de déploiement continu.",
-        "Veiller sur l’évolution des technologies."
+        "Rester à jour sur l’évolution des technologies."
       ]
     },
     "@aeraulique_construction": {

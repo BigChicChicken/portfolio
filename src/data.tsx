@@ -42,8 +42,8 @@ export default {
     status: 'Executive',
     tel: {
         icon: 'call',
-        text: '(+33) 7.70.97.89.32',
-        url: 'tel:+33770978932',
+        text: '(+1) 438 448-5350',
+        url: 'tel:+14384485350',
     },
     email: {
         icon: 'alternate_email',
