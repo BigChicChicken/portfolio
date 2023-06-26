@@ -1,10 +1,9 @@
 {
   "About me": "About me",
-  "Agronomy/Agrifood public institute": "Agronomy/Agrifood public institute",
+  "Public institute of Agronomy/Agri-food": "Public institute of Agronomy/Agri-food",
   "Bank": "Bank",
   "Communication": "Communication",
   "Current status": "Current status",
-  "Current salary": "Current salary",
   "Salary": "Salaire",
   "CV - French": "CV - French",
   "CV - Canadian": "CV - Canadian",
@@ -12,7 +11,6 @@
   "Developer": "Developer",
   "Development tools": "Development tools",
   "Diplomas": "Diplomas",
-  "Equivalence": "Equivalence",
   "Equivalences": "Equivalences",
   "Executive": "Executive",
   "Framework - Back-End": "Framework - Back-End",
@@ -26,54 +24,54 @@
   "Development internship": "Development internship",
   "Today": "Today",
   "Web developer": "Web developer",
-  "Work history": "Work history",
+  "Professional journey": "Professional journey",
   "Year": "Year",
-  "@about_me": "Web developer since 2016, I am constantly evolving my skills. Passionate, self-taught and versatile, I mastery the different technical steps to create a web application; from understanding of the needs to front-end and back-end development, including the maintenance.",
+  "@about_me": "Web developer since 2016, I constantly enhance my skills. Passionate, self-taught and versatile, I master the different technical stages of web application development, from understanding of the requirements to front-end and back-end development, including the maintenance.",
   "@recruitment": "You are a recruiter and you want to contact me. Here is some information about my current situation and my CV.",
   "@jobs": {
     "@sogexia": {
       "@tasks": [
-        "Develop and improve functionalities.",
-        "Analyze and correct code from other developers.",
-        "Work with a team using the SCRUM methodology.",
-        "Estimate the complexity and design time of new projects.",
-        "Daily exchanging updates on the progress of different tasks.",
+        "Develop and enhance features.",
+        "Analyze and fix code written by other developers.",
+        "Work with a team using the SCRUM method.",
+        "Estimate the complexity and design time for new projects.",
+        "Excange daily updates on the progress of various tasks.",
         "Design future developments based on the clean hexagonal architecture.",
-        "Ensure the resolution of bugs reported by various services.",
+        "Ensure the resolution of bugs reported by differents services.",
         "Implement functional and unit tests."
       ]
     },
     "@cnerta_web": {
       "@tasks": [
-        "Develop websites/intranet.",
+        "Develop websites/intranets.",
         "Design databases.",
-        "Create and make available Rest APIs.",
+        "Create and make available REST APIs.",
         "Maintain the sustainability of several departmental websites.",
-        "Analyze and create specifications.",
+        "Analyze and create specifications documents.",
         "Estimate design times for new projects.",
-        "Interact with the members of a project and propose changes.",
-        "Implement continuous deployment best practices.",
-        "Monitor the evolution of technologies."
+        "Interact with project members and propose improvements.",
+        "Implement best practices for continuous deployment.",
+        "Stay update on technology advancements."
       ]
     },
     "@aeraulique_construction": {
       "@tasks": [
-        "Develop websites/intranet.",
+        "Develop websites/intranets.",
         "Design databases.",
-        "Reverse engineering on sensitive applications.",
-        "Manager of information and discussion meetings on the design. (SCRUM)",
-        "Improve advanced trigonometric calculations.",
-        "Optimize the daily tasks of the company.",
+        "Perform reverse engineering on sensitive applications.",
+        "Facilitate information and exchange meetings for design. (SCRUM)",
+        "Enhance advanced trigonometric calculations.",
+        "Optimize daily company tasks.",
         "Supervise the implementation of software and new standards.",
-        "Set up distribution services (SMTP, Web Server).",
-        "Maintain the proper functioning of servers and general services.",
-        "Train and educate the various employees.",
-        "Study and manage changes in IT structure."
+        "Implement distribution services (SMTP, Web Server).",
+        "Ensure the proper functioning of servers and general services.",
+        "Train and raise awareness among various collaborators.",
+        "Study and manage IT structure evolutions."
       ]
     },
     "@infin_it": {
       "@tasks": [
-        "Develop websites/intranet.",
+        "Develop intranet websites.",
         "Design databases.",
         "Produce and apply a responsive graphic charter.",
         "Produce technical documentation (UML Diagram, Database schema, etc...)."
