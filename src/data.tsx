@@ -71,7 +71,7 @@ export default {
     },
     career: {
         icon: 'work_history',
-        title: 'Work history',
+        title: 'Professional journey',
         data: [
             {
                 company: 'Sogexia',
