@@ -39,7 +39,7 @@ import INFINIT_SVG from 'resources/svg/logo/Infinit.svg';
 export default {
     name: 'Florent TEDESCO',
     description: 'Web developer',
-    status: 'Executive',
+    status: null,
     tel: {
         icon: 'call',
         text: '(+1) 438 448-5350',
@@ -288,7 +288,7 @@ export default {
         title: 'Recruiter corner',
         text: '@recruitment',
         salary: {
-            value: 40000,
+            value: null,
             currency: '€',
             period: 'Year',
         },

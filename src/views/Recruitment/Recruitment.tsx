@@ -40,25 +40,29 @@ class Recruitment extends Component<{}, RecruitmentStateI> {
                                 <Translator value={data.recruitment.text} />
                             </p>
 
-                            <div className="status">
-                                <p>
-                                    <Translator value="Current status" />
-                                    {':'}
-                                </p>
-                                <Translator value={data.status} />
-                            </div>
-
-                            <div className="salary">
-                                <p>
-                                    <Translator value="Salary" />
-                                    {':'}
-                                </p>
-                                {data.recruitment.salary.value}
-                                {`${data.recruitment.salary.currency}/`}
-                                <Translator
-                                    value={data.recruitment.salary.period}
-                                />
-                            </div>
+                            {data.status &&
+                                <div className="status">
+                                    <p>
+                                        <Translator value="Current status" />
+                                        {':'}
+                                    </p>
+                                    <Translator value={data.status} />
+                                </div>
+                            }
+                            
+                            {data.recruitment.salary.value &&
+                                <div className="salary">
+                                    <p>
+                                        <Translator value="Salary" />
+                                        {':'}
+                                    </p>
+                                    {data.recruitment.salary.value}
+                                    {`${data.recruitment.salary.currency}/`}
+                                    <Translator
+                                        value={data.recruitment.salary.period}
+                                    />
+                                </div>
+                            }
 
                             <div className="cv-container">
                                 <Button
