@@ -31,6 +31,7 @@ import MARIADB_SVG from 'resources/svg/skills/MariaDB.svg';
 import MSSQL_SVG from 'resources/svg/skills/MsSQL.svg';
 import FIREBIRD_SVG from 'resources/svg/skills/Firebird.svg';
 
+import HOODI_SVG from 'resources/svg/logo/Hoodi.svg';
 import SOGEXIA_SVG from 'resources/svg/logo/Sogexia.svg';
 import CNERTA_SVG from 'resources/svg/logo/Cnerta.svg';
 import AERAULIQUE_SVG from 'resources/svg/logo/Aeraulique Construction.svg';
@@ -39,11 +40,11 @@ import INFINIT_SVG from 'resources/svg/logo/Infinit.svg';
 export default {
     name: 'Florent TEDESCO',
     description: 'Web developer',
-    status: null,
+    status: 'Employee',
     tel: {
         icon: 'call',
-        text: '(+1) 438 448-5350',
-        url: 'tel:+14384485350',
+        text: '(+1) 367 380-8646',
+        url: 'tel:+13673808646',
     },
     email: {
         icon: 'alternate_email',
@@ -73,6 +74,19 @@ export default {
         icon: 'work_history',
         title: 'Professional journey',
         data: [
+            {
+                company: 'Hoodi',
+                name: 'Software developer',
+                logo: HOODI_SVG,
+                location: 'Canada',
+                domain: 'Real estate',
+                date: {
+                    begin: '2023-08',
+                    end: null,
+                },
+                tasks: [],
+                skills: ['HTML', 'CSS', 'TypeScript', 'Angular', 'AWS'],
+            },
             {
                 company: 'Sogexia',
                 name: 'IT engineer',
@@ -288,8 +302,8 @@ export default {
         title: 'Recruiter corner',
         text: '@recruitment',
         salary: {
-            value: null,
-            currency: '€',
+            value: 80000,
+            currency: '$',
             period: 'Year',
         },
     },
