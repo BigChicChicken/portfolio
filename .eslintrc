@@ -20,5 +20,10 @@
     ],
     "rules": {
       "react/no-find-dom-node": 0
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
     }
 }

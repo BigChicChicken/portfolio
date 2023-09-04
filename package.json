@@ -5,8 +5,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "ROUTER_BASENAME=/portfolio webpack",
     "start": "webpack serve --open",
+    "build": "ROUTER_BASENAME=/portfolio webpack",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
