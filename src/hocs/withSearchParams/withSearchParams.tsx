@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropsWithoutRef } from 'react';
 import { SetURLSearchParams, useSearchParams } from 'react-router-dom';
 
 export interface WithSearchParamsProps {
@@ -14,9 +14,9 @@ export default function withSearchParams<
             WrappedComponent.name ||
             'Component';
 
-        const render = (
-            props: Omit<P, keyof WithSearchParamsProps>,
-            ref: React.ForwardedRef<P>
+        const render: React.ForwardRefRenderFunction<P, PropsWithoutRef<P>> = (
+            props,
+            ref
         ) => {
             const searchParams = useSearchParams();
 
