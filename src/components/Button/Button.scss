@@ -6,11 +6,32 @@
   gap: $space-sm;
   text-transform: uppercase;
   font-size: 12pt;
-  padding: $space-xs $space-sm;
-  color: $white;
-  background-color: $background;
-  border-color: $border-color;
+  font-weight: bold;
+  padding: $space-md $space-lg;
   border-width: $border-md;
   border-style: solid;
   border-radius: $border-radius;
+  transition: background-color 0.3s ease;
+
+  &[data-theme="Dark"] {
+    background-color: $background;
+    border-color: $border-color;
+    color: $white;
+  }
+
+  &[data-theme="Light"] {
+    background-color: $background-light;
+    border-color: $border-color-light;
+    color: $black;
+  }
+
+  &:hover {
+    &[data-theme="Dark"] {
+      background-color: $background-hover;
+    }
+
+    &[data-theme="Light"] {
+      background-color: $background-hover-light;
+    }
+  }
 }

@@ -1,84 +1,93 @@
 {
-  "About me": "About me",
-  "Public institute of Agronomy/Agri-food": "Public institute of Agronomy/Agri-food",
-  "Bank": "Bank",
-  "Communication": "Communication",
-  "Current status": "Current status",
-  "Salary": "Salaire",
-  "CV - French": "CV - French",
-  "CV - Canadian": "CV - Canadian",
-  "Databases": "Databases",
-  "Developer": "Developer",
-  "Development tools": "Development tools",
-  "Diplomas": "Diplomas",
-  "Equivalences": "Equivalences",
-  "Employee": "Employee",
-  "Executive": "Executive",
-  "Framework - Back-End": "Framework - Back-End",
-  "Framework - Front-End": "Framework - Front-End",
-  "France": "France",
-  "IT engineer": "IT engineer",
-  "Languages": "Langues",
-  "Recruiter corner": "Recruiter corner",
-  "Sheet metal industry/Ventilation": "Sheet metal industry/Ventilation",
-  "Skills": "Skills",
-  "Development internship": "Development internship",
-  "Real estate": "Real estate",
-  "Software developer": "Software developer",
-  "Today": "Today",
-  "Web developer": "Web developer",
-  "Professional journey": "Professional journey",
-  "Year": "Year",
-  "@about_me": "Web developer since 2016, I constantly enhance my skills. Passionate, self-taught and versatile, I master the different technical stages of web application development, from understanding of the requirements to front-end and back-end development, including the maintenance.",
-  "@recruitment": "You are a recruiter and you want to contact me. Here is some information about my current situation and my CV.",
-  "@jobs": {
-    "@sogexia": {
-      "@tasks": [
-        "Develop and enhance features.",
-        "Analyze and fix code written by other developers.",
-        "Work with a team using the SCRUM method.",
-        "Estimate the complexity and design time for new projects.",
-        "Excange daily updates on the progress of various tasks.",
-        "Design future developments based on the clean hexagonal architecture.",
-        "Ensure the resolution of bugs reported by differents services.",
-        "Implement functional and unit tests."
-      ]
-    },
-    "@cnerta_web": {
-      "@tasks": [
-        "Develop websites/intranets.",
-        "Design databases.",
-        "Create and make available REST APIs.",
-        "Maintain the sustainability of several departmental websites.",
-        "Analyze and create specifications documents.",
-        "Estimate design times for new projects.",
-        "Interact with project members and propose improvements.",
-        "Implement best practices for continuous deployment.",
-        "Stay update on technology advancements."
-      ]
-    },
-    "@aeraulique_construction": {
-      "@tasks": [
-        "Develop websites/intranets.",
-        "Design databases.",
-        "Perform reverse engineering on sensitive applications.",
-        "Facilitate information and exchange meetings for design. (SCRUM)",
-        "Enhance advanced trigonometric calculations.",
-        "Optimize daily company tasks.",
-        "Supervise the implementation of software and new standards.",
-        "Implement distribution services (SMTP, Web Server).",
-        "Ensure the proper functioning of servers and general services.",
-        "Train and raise awareness among various collaborators.",
-        "Study and manage IT structure evolutions."
-      ]
-    },
-    "@infin_it": {
-      "@tasks": [
-        "Develop intranet websites.",
-        "Design databases.",
-        "Produce and apply a responsive graphic charter.",
-        "Produce technical documentation (UML Diagram, Database schema, etc...)."
-      ]
+    "About me": "About me",
+    "Consult my resume": "Consult my resume",
+    "Bank": "Bank",
+    "Communication": "Communication",
+    "Contact me": "Contact me",
+    "Current status": "Current status",
+    "CV - Canadian": "CV - Canadian",
+    "CV - French": "CV - French",
+    "Databases": "Databases",
+    "Developer": "Developer",
+    "Development internship": "Development internship",
+    "Development tools": "Development tools",
+    "Diplomas": "Diplomas",
+    "Employee": "Employee",
+    "Equivalences": "Equivalencies",
+    "Executive": "Executive",
+    "Framework - Back-End": "Framework - Back-End",
+    "Framework - Front-End": "Framework - Front-End",
+    "France": "France",
+    "IT engineer": "IT engineer",
+    "Languages": "Languages",
+    "Professional journey": "Professional journey",
+    "Public institute of Agronomy/Agri-food": "Public institute of Agronomy/Agri-food",
+    "Real estate": "Real estate",
+    "Recruiter corner": "Recruiter corner",
+    "Salary": "Salary",
+    "Sheet metal industry/ventilation": "Sheet metal industry/ventilation",
+    "Skills": "Skills",
+    "Software developer": "Software developer",
+    "Today": "Today",
+    "Web developer": "Web developer",
+    "Year": "Year",
+    "@about_me": "Web developer since 2016, passionate and versatile. I excel in creating complete web applications, mastering both front-end and back-end.",
+    "@recruitment": "Interested in my profile? Contact me for more details or check out my complete resume here.",
+    "@jobs": {
+        "@hoodi": {
+            "@tasks": [
+                "Integrate and enhance application features.",
+                "Lead development projects from design to production.",
+                "Participate in SCRUM meetings to coordinate the team.",
+                "Share advice and suggestions to improve methods.",
+                "Propose improvements to optimize results.",
+                "Provide technical support to fix issues.",
+                "Develop tools to automate processes."
+            ]
+        },
+        "@sogexia": {
+            "@tasks": [
+                "Improve application features for performance and reliability.",
+                "Analyze code and suggest improvements.",
+                "Collaborate in SCRUM for project management.",
+                "Evaluate project complexity and estimate timelines.",
+                "Ensure daily communication with the team.",
+                "Design features using hexagonal architecture.",
+                "Fix issues to ensure product quality.",
+                "Implement unit and functional tests."
+            ]
+        },
+        "@cnerta_web": {
+            "@tasks": [
+                "Develop and maintain secure websites and intranets.",
+                "Structure databases suited to project needs.",
+                "Create reliable and well-documented REST APIs.",
+                "Perform regular maintenance on websites.",
+                "Write detailed project specifications.",
+                "Accurately estimate timelines and resources.",
+                "Collaborate to propose functional improvements.",
+                "Implement continuous deployment."
+            ]
+        },
+        "@aeraulique_construction": {
+            "@tasks": [
+                "Develop custom web/intranet solutions.",
+                "Design robust databases.",
+                "Improve application performance via reverse engineering.",
+                "Lead SCRUM meetings.",
+                "Automate daily tasks.",
+                "Oversee the implementation of new software.",
+                "Manage the maintenance of critical servers.",
+                "Train employees on new tools."
+            ]
+        },
+        "@infin_it": {
+            "@tasks": [
+                "Design secure and efficient intranets.",
+                "Model optimized databases.",
+                "Develop a responsive graphic charter.",
+                "Write technical documentation to aid maintenance."
+            ]
+        }
     }
-  }
 }

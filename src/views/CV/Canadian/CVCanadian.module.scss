@@ -79,7 +79,8 @@ ul {
 
   }
 
-  &:nth-child(2) {
+  &:nth-child(2),
+  &:nth-child(3) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto;
     grid-template-areas:
@@ -189,8 +190,8 @@ ul {
     justify-content: space-between;
     font-size: 10pt;
     font-style: italic;
-    color: $grey;
-    padding: $space-lg;
+    color: $grey;  
+    padding: $space-sm $space-lg $space-lg $space-lg;
   }
 
   .section-title {

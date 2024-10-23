@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import data from 'src/data';
 import Translator from 'components/Translator/Translator';
 import Button from 'components/Button/Button';
-import CVFrench from 'views/CV/French/CVFrench';
 import CVCanadian from 'views/CV/Canadian/CVCanadian';
 import Section from 'components/Section/Section';
 
@@ -13,7 +12,6 @@ export interface RecruitmentStateI {
 }
 
 class Recruitment extends Component<{}, RecruitmentStateI> {
-    private CVFrench: CVFrench | null = null;
     private CVCanadian: CVCanadian | null = null;
 
     constructor(props: {}) {
@@ -40,7 +38,7 @@ class Recruitment extends Component<{}, RecruitmentStateI> {
                                 <Translator value={data.recruitment.text} />
                             </p>
 
-                            {data.status &&
+                            {data.status && (
                                 <div className="status">
                                     <p>
                                         <Translator value="Current status" />
@@ -48,21 +46,7 @@ class Recruitment extends Component<{}, RecruitmentStateI> {
                                     </p>
                                     <Translator value={data.status} />
                                 </div>
-                            }
-                            
-                            {data.recruitment.salary.value &&
-                                <div className="salary">
-                                    <p>
-                                        <Translator value="Salary" />
-                                        {':'}
-                                    </p>
-                                    {data.recruitment.salary.value}
-                                    {`${data.recruitment.salary.currency}/`}
-                                    <Translator
-                                        value={data.recruitment.salary.period}
-                                    />
-                                </div>
-                            }
+                            )}
 
                             <div className="cv-container">
                                 <Button
@@ -75,30 +59,11 @@ class Recruitment extends Component<{}, RecruitmentStateI> {
                                     <div className="material-symbols-outlined icon">
                                         open_in_new
                                     </div>
-                                    <Translator value="CV - Canadian" />
-                                </Button>
-
-                                <Button
-                                    onClick={() => {
-                                        if (this.CVFrench) {
-                                            this.CVFrench.show();
-                                        }
-                                    }}
-                                >
-                                    <div className="material-symbols-outlined icon">
-                                        open_in_new
-                                    </div>
-                                    <Translator value="CV - French" />
+                                    <Translator value="Consult my resume" />
                                 </Button>
                             </div>
                         </div>
                     }
-                />
-
-                <CVFrench
-                    ref={(element: CVFrench) => {
-                        this.CVFrench = element;
-                    }}
                 />
 
                 <CVCanadian

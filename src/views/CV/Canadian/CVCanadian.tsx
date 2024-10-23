@@ -134,14 +134,14 @@ class CVCanadian extends Component<{}, {}> {
                                                         {items
                                                             .map(
                                                                 ({ name }) =>
-                                                                    name
+                                                                    name,
                                                             )
                                                             .join(', ')}
                                                         .
                                                     </td>
                                                 </tr>
                                             </>
-                                        )
+                                        ),
                                     )}
                                 </tbody>
                             </table>
@@ -179,7 +179,7 @@ class CVCanadian extends Component<{}, {}> {
                                                     </td>
                                                 </tr>
                                             </>
-                                        )
+                                        ),
                                     )}
                                 </tbody>
                             </table>
@@ -188,7 +188,7 @@ class CVCanadian extends Component<{}, {}> {
 
                     <div className="footer">
                         <p>{data.name}</p>
-                        <p>1/2</p>
+                        <p>1/3</p>
                     </div>
                 </div>
 
@@ -205,65 +205,152 @@ class CVCanadian extends Component<{}, {}> {
                                     </h3>
                                 </div>
                             </div>
-                            {data.career.data.map(
-                                ({
-                                    company,
-                                    domain,
-                                    date: { begin, end },
-                                    name,
-                                    skills,
-                                    tasks,
-                                }) => (
-                                    <>
-                                        <div className="job">
-                                            <h4 className="company">
-                                                {company}
-                                                {' ('}
-                                                <Translator value={domain} />
-                                                {')'}
-                                            </h4>
-                                            <div className="date">
-                                                <time dateTime={begin}>
-                                                    {begin}
-                                                </time>
-                                                {' - '}
-                                                {end ? (
-                                                    <time dateTime={end}>
-                                                        {end}
+                            {data.career.data
+                                .slice(0, 4)
+                                .map(
+                                    ({
+                                        company,
+                                        domain,
+                                        date: { begin, end },
+                                        name,
+                                        skills,
+                                        tasks,
+                                    }) => (
+                                        <>
+                                            <div className="job">
+                                                <h4 className="company">
+                                                    {company}
+                                                    {' ('}
+                                                    <Translator
+                                                        value={domain}
+                                                    />
+                                                    {')'}
+                                                </h4>
+                                                <div className="date">
+                                                    <time dateTime={begin}>
+                                                        {begin}
                                                     </time>
-                                                ) : (
-                                                    <Translator value="Today" />
-                                                )}
+                                                    {' - '}
+                                                    {end ? (
+                                                        <time dateTime={end}>
+                                                            {end}
+                                                        </time>
+                                                    ) : (
+                                                        <Translator value="Today" />
+                                                    )}
+                                                </div>
+                                                <p className="name">
+                                                    <Translator value={name} />
+                                                </p>
+                                                <p className="skills">
+                                                    {skills.join(', ')}.
+                                                </p>
+                                                <ul className="tasks">
+                                                    {tasks
+                                                        .slice(0, 7)
+                                                        .map((task) => (
+                                                            <>
+                                                                <li>
+                                                                    <Translator
+                                                                        value={
+                                                                            task
+                                                                        }
+                                                                    />
+                                                                </li>
+                                                            </>
+                                                        ))}
+                                                </ul>
                                             </div>
-                                            <p className="name">
-                                                <Translator value={name} />
-                                            </p>
-                                            <p className="skills">
-                                                {skills.join(', ')}.
-                                            </p>
-                                            <ul className="tasks">
-                                                {tasks
-                                                    .slice(0, 7)
-                                                    .map((task) => (
-                                                        <>
-                                                            <li>
-                                                                <Translator
-                                                                    value={task}
-                                                                />
-                                                            </li>
-                                                        </>
-                                                    ))}
-                                            </ul>
-                                        </div>
-                                    </>
-                                )
-                            )}
+                                        </>
+                                    ),
+                                )}
                         </div>
                     </div>
 
                     <div className="footer">
                         <p>{data.name}</p>
-                        <p>2/2</p>
+                        <p>2/3</p>
+                    </div>
+                </div>
+
+                <div className="page">
+                    <div className="body">
+                        <div>
+                            <div>
+                                <div className="section-title">
+                                    <div className="material-symbols-outlined icon">
+                                        {data.career.icon}
+                                    </div>
+                                    <h3>
+                                        <Translator value={data.career.title} />
+                                    </h3>
+                                </div>
+                            </div>
+                            {data.career.data
+                                .slice(4)
+                                .map(
+                                    ({
+                                        company,
+                                        domain,
+                                        date: { begin, end },
+                                        name,
+                                        skills,
+                                        tasks,
+                                    }) => (
+                                        <>
+                                            <div className="job">
+                                                <h4 className="company">
+                                                    {company}
+                                                    {' ('}
+                                                    <Translator
+                                                        value={domain}
+                                                    />
+                                                    {')'}
+                                                </h4>
+                                                <div className="date">
+                                                    <time dateTime={begin}>
+                                                        {begin}
+                                                    </time>
+                                                    {' - '}
+                                                    {end ? (
+                                                        <time dateTime={end}>
+                                                            {end}
+                                                        </time>
+                                                    ) : (
+                                                        <Translator value="Today" />
+                                                    )}
+                                                </div>
+                                                <p className="name">
+                                                    <Translator value={name} />
+                                                </p>
+                                                <p className="skills">
+                                                    {skills.join(', ')}.
+                                                </p>
+                                                <ul className="tasks">
+                                                    {tasks
+                                                        .slice(0, 7)
+                                                        .map((task) => (
+                                                            <>
+                                                                <li>
+                                                                    <Translator
+                                                                        value={
+                                                                            task
+                                                                        }
+                                                                    />
+                                                                </li>
+                                                            </>
+                                                        ))}
+                                                </ul>
+                                            </div>
+                                        </>
+                                    ),
+                                )}
+                        </div>
+                    </div>
+
+                    <div className="footer">
+                        <p>{data.name}</p>
+                        <p>3/3</p>
                     </div>
                 </div>
             </CV>

@@ -8,6 +8,9 @@ import PHP_SVG from 'resources/svg/skills/PHP.svg';
 import CSS_SVG from 'resources/svg/skills/CSS.svg';
 import JAVASCRIPT_SVG from 'resources/svg/skills/Javascript.svg';
 import TYPESCRIPT_SVG from 'resources/svg/skills/Typescript.svg';
+import CSHARP_SVG from 'resources/svg/skills/CSharp.svg';
+
+import AWS_SVG from 'resources/svg/skills/AWS.svg';
 import GIT_SVG from 'resources/svg/skills/Git.svg';
 import COMPOSER_SVG from 'resources/svg/skills/Composer.svg';
 import YARN_SVG from 'resources/svg/skills/Yarn.svg';
@@ -16,6 +19,7 @@ import DOCKER_SVG from 'resources/svg/skills/Docker.svg';
 import ANSIBLE_SVG from 'resources/svg/skills/Ansible.svg';
 import MERCURE_SVG from 'resources/svg/skills/Mercure.svg';
 import RABBITMQ_SVG from 'resources/svg/skills/RabbitMQ.svg';
+
 import REACT_SVG from 'resources/svg/skills/React.svg';
 import ANGULAR_SVG from 'resources/svg/skills/Angular.svg';
 import MUI_SVG from 'resources/svg/skills/MUI.svg';
@@ -23,9 +27,11 @@ import BOOTSTRAP_SVG from 'resources/svg/skills/Bootstrap.svg';
 import SEMANTIC_SVG from 'resources/svg/skills/Semantic.svg';
 import LESS_SVG from 'resources/svg/skills/LESS.svg';
 import JQUERY_SVG from 'resources/svg/skills/jQuery.svg';
+
 import SYMFONY_SVG from 'resources/svg/skills/Symfony.svg';
 import APIPLATFORM_SVG from 'resources/svg/skills/ApiPlatform.svg';
 import SYLIUS_SVG from 'resources/svg/skills/Sylius.svg';
+
 import MYSQL_SVG from 'resources/svg/skills/MySQL.svg';
 import MARIADB_SVG from 'resources/svg/skills/MariaDB.svg';
 import MSSQL_SVG from 'resources/svg/skills/MsSQL.svg';
@@ -84,7 +90,9 @@ export default {
                     begin: '2023-08',
                     end: null,
                 },
-                tasks: [],
+                tasks: [...Array(7).keys()].map(
+                    (key) => `@jobs.@hoodi.@tasks.${key}`,
+                ),
                 skills: ['HTML', 'CSS', 'TypeScript', 'Angular', 'AWS'],
             },
             {
@@ -98,7 +106,7 @@ export default {
                     end: '2023-06',
                 },
                 tasks: [...Array(8).keys()].map(
-                    (key) => `@jobs.@sogexia.@tasks.${key}`
+                    (key) => `@jobs.@sogexia.@tasks.${key}`,
                 ),
                 skills: ['HTML', 'PHP', 'CSS', 'TypeScript', 'Angular'],
             },
@@ -107,13 +115,13 @@ export default {
                 name: 'Web developer',
                 logo: CNERTA_SVG,
                 location: 'France',
-                domain: 'Agronomy/Agrifood public institute',
+                domain: 'Public institute of Agronomy/Agri-food',
                 date: {
                     begin: '2021-01',
                     end: '2022-12',
                 },
-                tasks: [...Array(9).keys()].map(
-                    (key) => `@jobs.@cnerta_web.@tasks.${key}`
+                tasks: [...Array(8).keys()].map(
+                    (key) => `@jobs.@cnerta_web.@tasks.${key}`,
                 ),
                 skills: [
                     'HTML',
@@ -142,13 +150,13 @@ export default {
                 name: 'Developer',
                 logo: AERAULIQUE_SVG,
                 location: 'France',
-                domain: 'Sheet metal industry/Ventilation',
+                domain: 'Sheet metal industry/ventilation',
                 date: {
                     begin: '2016-06',
                     end: '2021-01',
                 },
                 tasks: [...Array(11).keys()].map(
-                    (key) => `@jobs.@aeraulique_construction.@tasks.${key}`
+                    (key) => `@jobs.@aeraulique_construction.@tasks.${key}`,
                 ),
                 skills: [
                     'HTML',
@@ -174,7 +182,7 @@ export default {
                     end: '2016-01',
                 },
                 tasks: [...Array(4).keys()].map(
-                    (key) => `@jobs.@infin_it.@tasks.${key}`
+                    (key) => `@jobs.@infin_it.@tasks.${key}`,
                 ),
                 skills: [
                     'HTML',
@@ -195,30 +203,26 @@ export default {
             {
                 category: 'Languages',
                 items: [
+                    { name: 'Javascript', svg: JAVASCRIPT_SVG },
+                    { name: 'Typescript', svg: TYPESCRIPT_SVG },
                     { name: 'HTML', svg: HTML_SVG },
-                    { name: 'PHP', svg: PHP_SVG },
                     { name: 'CSS', svg: CSS_SVG },
-                    {
-                        name: 'Javascript',
-                        svg: JAVASCRIPT_SVG,
-                    },
-                    {
-                        name: 'Typescript',
-                        svg: TYPESCRIPT_SVG,
-                    },
+                    { name: 'PHP', svg: PHP_SVG },
+                    { name: 'C#', svg: CSHARP_SVG },
                 ],
             },
             {
                 category: 'Development tools',
                 items: [
+                    { name: 'Docker', svg: DOCKER_SVG },
                     { name: 'Git', svg: GIT_SVG },
+                    { name: 'AWS', svg: AWS_SVG },
+                    { name: 'NPM', svg: NPM_SVG },
                     { name: 'Composer', svg: COMPOSER_SVG },
                     { name: 'Yarn', svg: YARN_SVG },
-                    { name: 'NPM', svg: NPM_SVG },
-                    { name: 'Docker', svg: DOCKER_SVG },
+                    { name: 'RabbitMQ', svg: RABBITMQ_SVG },
                     { name: 'Ansible', svg: ANSIBLE_SVG },
                     { name: 'Mercure', svg: MERCURE_SVG },
-                    { name: 'RabbitMQ', svg: RABBITMQ_SVG },
                 ],
             },
             {
@@ -226,24 +230,18 @@ export default {
                 items: [
                     { name: 'React', svg: REACT_SVG },
                     { name: 'Angular', svg: ANGULAR_SVG },
+                    { name: 'Bootstrap', svg: BOOTSTRAP_SVG },
                     { name: 'MUI', svg: MUI_SVG },
-                    {
-                        name: 'Bootstrap',
-                        svg: BOOTSTRAP_SVG,
-                    },
-                    { name: 'Semantic', svg: SEMANTIC_SVG },
                     { name: 'LESS', svg: LESS_SVG },
                     { name: 'jQuery', svg: JQUERY_SVG },
+                    { name: 'Semantic', svg: SEMANTIC_SVG },
                 ],
             },
             {
                 category: 'Framework - Back-End',
                 items: [
                     { name: 'Symfony', svg: SYMFONY_SVG },
-                    {
-                        name: 'ApiPlatform',
-                        svg: APIPLATFORM_SVG,
-                    },
+                    { name: 'ApiPlatform', svg: APIPLATFORM_SVG },
                     { name: 'Sylius', svg: SYLIUS_SVG },
                 ],
             },
@@ -302,8 +300,8 @@ export default {
         title: 'Recruiter corner',
         text: '@recruitment',
         salary: {
-            value: 80000,
-            currency: '$',
+            value: 85700,
+            currency: ' $CAD',
             period: 'Year',
         },
     },

@@ -1,0 +1,56 @@
+@import 'resources/styles/constants';
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+    a {
+        display: flex;
+        align-items: center;
+        gap: $space-sm;
+        color: $white;
+        text-decoration: none;
+        
+    }
+
+    .content {
+        position: relative;
+        padding: $space-md;
+        background-color: $background;
+        border-color: $border-color;
+        border-width: $border-md;
+        border-style: solid;
+        border-radius: $border-radius;
+
+        .top-bar {
+            font-size: 16pt;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: $space-lg;
+            margin-bottom: $space-md;
+
+            .close-button {
+                background-color: transparent;
+                color: $white;
+                margin: $space-sm;
+                border: none;
+                cursor: pointer;
+            }
+        }
+
+        .body {
+            display: flex;
+            flex-direction: column;
+            gap: $space-sm;
+        }
+    }
+}
